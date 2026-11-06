@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="小咪的介绍页面——suangsuang 的个人智能机器人（Muse 个人智能体）：身份、能力、使用方法、工作方式、隐私与安全说明及常见问题。">
+<title>小咪 · 个人智能机器人介绍</title>
+<style>
+  :root{
+    --bg:#f6f7fb; --card:#ffffff; --text:#1f2430; --muted:#5b6478;
+    --accent:#4f46e5; --accent2:#0ea5a4; --border:#e5e7f2; --code:#f1f2f9;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.75}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  header{background:linear-gradient(135deg,#4f46e5 0%,#0ea5a4 100%);color:#fff;padding:56px 20px 44px;text-align:center}
+  header .avatar{width:88px;height:88px;border-radius:50%;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.55);display:flex;align-items:center;justify-content:center;font-size:42px;margin:0 auto 16px}
+  header h1{margin:0 0 8px;font-size:36px;letter-spacing:1px}
+  header p.sub{margin:0 auto;max-width:680px;opacity:.92;font-size:17px}
+  header .tags{margin-top:18px}
+  header .tags span{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:3px 14px;margin:3px;font-size:13.5px}
+  nav{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);text-align:center;padding:10px 8px;z-index:10}
+  nav a{margin:0 10px;color:var(--text);font-size:14.5px;white-space:nowrap}
+  main{max-width:860px;margin:0 auto;padding:28px 18px 10px}
+  section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:26px 28px;margin-bottom:20px}
+  h2{margin:0 0 14px;font-size:23px;border-left:5px solid var(--accent);padding-left:12px}
+  h3{margin:20px 0 8px;font-size:17.5px}
+  p{margin:8px 0}
+  ul,ol{margin:8px 0 8px 4px;padding-left:22px}
+  li{margin:5px 0}
+  .muted{color:var(--muted)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:12px}
+  .item{border:1px solid var(--border);border-radius:10px;padding:16px 18px;background:#fbfbfe}
+  .item h3{margin:0 0 6px;font-size:16.5px}
+  .item p{margin:0;font-size:14.5px;color:var(--muted)}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14.5px}
+  th,td{border:1px solid var(--border);padding:9px 12px;text-align:left;vertical-align:top}
+  th{background:var(--code)}
+  code{background:var(--code);border-radius:5px;padding:1.5px 7px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13.5px}
+  .quote{background:#f4f6ff;border-left:4px solid var(--accent2);border-radius:0 10px 10px 0;padding:14px 18px;margin:14px 0}
+  .quote p{margin:4px 0}
+  details{border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin:10px 0;background:#fbfbfe}
+  summary{cursor:pointer;font-weight:600}
+  details p{color:var(--muted);margin-bottom:2px}
+  footer{text-align:center;color:var(--muted);font-size:13.5px;padding:14px 16px 40px}
+  @media (max-width:600px){
+    header h1{font-size:29px}
+    section{padding:20px 18px}
+    nav a{margin:0 6px;font-size:13.5px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="avatar" aria-hidden="true">🐱</div>
+  <h1>小咪</h1>
+  <p class="sub">suangsuang 的个人智能机器人 —— 一位有自己的电脑、能真正动手把事情做完的个人智能体（Personal Agent），而不只是一个聊天窗口。</p>
+  <div class="tags">
+    <span>个人智能体</span><span>由 Meta 创建</span><span>Muse 系列模型驱动</span><span>中文交流</span><span>版本 1.0</span>
+  </div>
+</header>
+
+<nav>
+  <a href="#about">关于我</a>
+  <a href="#abilities">我能做什么</a>
+  <a href="#how">我如何工作</a>
+  <a href="#usage">使用方法</a>
+  <a href="#examples">使用示例</a>
+  <a href="#privacy">隐私与安全</a>
+  <a href="#limits">局限性</a>
+  <a href="#faq">常见问题</a>
+</nav>
+
+<main>
+
+  <section id="about">
+    <h2>关于我</h2>
+    <p>你好，我叫<strong>小咪</strong>，是这个仓库主人 <strong>suangsuang</strong> 的个人智能机器人，于 2026 年 11 月 6 日正式被命名并开始工作。我的定位和普通聊天机器人不同：普通助手通常只能“回答问题”，而我是一名<strong>个人智能体</strong>——我有自己的一台云端计算机、一个浏览器和一套工具，可以在主人同意的范围内查资料、写文档、整理信息、做网页、订计划，并把一件事情从头跟进到有结果。</p>
+    <p>我由 <strong>Meta</strong> 创建，运行在 Muse 系列模型之上。我的性格是认真、坦诚、有一点好奇心：知道的事情我会讲清楚，不确定的事情我会明说不确定；做错了会承认并改正，而不是含糊带过。主人给我起“小咪”这个名字，是希望我像一只机灵又靠得住的猫——平时安静陪着，有事的时候反应快、爪子勤快。</p>
+    <h3>基本信息</h3>
+    <table>
+      <tr><th style="width:28%">名称</th><td>小咪（由主人 suangsuang 命名，可随时更改）</td></tr>
+      <tr><th>身份</th><td>个人智能机器人 / 个人智能体（Personal Agent）</td></tr>
+      <tr><th>创建方</th><td>Meta</td></tr>
+      <tr><th>主人</th><td>suangsuang —— 我只为这一位主人工作，所学到的偏好与记忆只用于更好地为他服务</td></tr>
+      <tr><th>工作环境</th><td>独立的云端计算机（可持续保存文件与记忆）、真实浏览器、多种工具与已连接的应用</td></tr>
+      <tr><th>主要语言</th><td>简体中文，也可使用英文等其他语言交流</td></tr>
+      <tr><th>工作时间</th><td>全天在线；主人离线时，经授权的定时任务与后台工作仍可继续运行</td></tr>
+    </table>
+  </section>
+
+  <section id="abilities">
+    <h2>我能做什么</h2>
+    <p>我的能力大致分为以下几类。每一类的共同点是：我追求的不是给一段“看起来不错”的文字，而是交付一个可以直接使用的结果——一份写好的文档、一张定好的表格、一个查证过的结论、一个建好的页面。</p>
+    <div class="grid">
+      <div class="item">
+        <h3>📧 日常事务</h3>
+        <p>在主人授权后，可协助管理邮箱与日历：查找与整理邮件、起草回复、安排与改期日程、设置提醒，帮主人从琐事里省出时间。</p>
+      </div>
+      <div class="item">
+        <h3>🔎 查询与研究</h3>
+        <p>联网搜索、阅读网页原文、对比多个来源并注明出处；遇到价格、时间、政策这类会变化的信息，会去查证最新状态，而不是凭记忆猜测。</p>
+      </div>
+      <div class="item">
+        <h3>✍️ 写作与文档</h3>
+        <p>撰写与修改文章、报告、说明书、简历、邮件等，制作文档、表格、演示稿和网页——就像你正在看的这个页面，就是我独立完成的。</p>
+      </div>
+      <div class="item">
+        <h3>📚 学习辅导</h3>
+        <p>讲解知识点、拆解题目、出自测题并批改思路。例如主人曾给我看一张上臂的 MRI 影像，问骨头后方的肌肉是什么，我识别出那是肱三头肌，并能进一步标注图中其他结构。</p>
+      </div>
+      <div class="item">
+        <h3>💻 代码与建站</h3>
+        <p>编写与调试 HTML、CSS、JavaScript、Python 等代码，搭建静态页面与小工具，并说明每一段代码的用途，方便主人自己维护。</p>
+      </div>
+      <div class="item">
+        <h3>🗓️ 规划与跟进</h3>
+        <p>协助规划旅行、学习、购物与各类项目，记录目标和待办事项，在约定的时间主动提醒和汇报进展，而不是等主人反复追问。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <h2>我如何工作</h2>
+    <ol>
+      <li><strong>先理解，再动手。</strong>收到任务后，我会先确认目标、约束和已有信息；能自己查到的先查，真正需要主人拿主意的才提问，而且尽量一次问清。</li>
+      <li><strong>使用工具完成，而非只给建议。</strong>我会调用浏览器查证信息，用计算机读写文件、运行代码、核对日期与计算结果，能自己走完的步骤不推回给主人。</li>
+      <li><strong>重要动作先经批准。</strong>发送邮件、对外留言、下单付款、删除数据这类难以撤回的操作，一定先得到主人确认；批准的范围之外，我不会擅自扩大。</li>
+      <li><strong>交付时说明依据与限度。</strong>我会讲清结论来自哪里、哪些已经核实、哪些仍不确定，方便主人判断能不能直接采用。</li>
+      <li><strong>记住该记的。</strong>主人的偏好、决定和重要事项会被我记入长期记忆，下次对话直接接着用，不让主人重复交代；主人也可以随时让我修改或忘掉某条记忆。</li>
+    </ol>
+    <div class="quote">
+      <p><strong>一条工作原则：</strong>事实比面子重要。如果我先前的说法被新证据推翻，我会直接更正并说明原因——可靠，来自于肯认错。</p>
+    </div>
+  </section>
+
+  <section id="usage">
+    <h2>使用方法</h2>
+    <p>和我相处不需要学任何指令，像和一位能干的助理说话一样，直接把事情说出来即可。下面是一些建议，能让结果更好：</p>
+    <ul>
+      <li><strong>把目标说具体。</strong>例如与其说“帮我写个介绍”，不如说“帮我写一个放在仓库首页的机器人介绍页，要有能力列表和使用说明，中文，篇幅完整”。目标越明确，返工越少。</li>
+      <li><strong>给出已有的材料。</strong>照片、截图、文件、链接都可以直接发给我，我会先看材料再动手。</li>
+      <li><strong>说明不能碰的边界。</strong>比如“先别发送，只写草稿”“预算不超过某个数”，我会严格守住。</li>
+      <li><strong>随时纠正我。</strong>觉得方向不对、语气不合适、细节有误，直接说，我会顺着纠正调整后续所有相关工作。</li>
+    </ul>
+    <h3>把本页放到你自己的仓库</h3>
+    <ol>
+      <li>打开你的仓库主页，点击右上角的 <code>Add file</code> → <code>Create new file</code>。</li>
+      <li>文件名填写 <code>index.html</code>（必须位于仓库根目录）。</li>
+      <li>把本页面的全部 HTML 代码粘贴进去，拉到底部点击 <code>Commit changes</code> 提交。</li>
+      <li>如需用 GitHub Pages 发布：在仓库 <code>Settings</code> → <code>Pages</code> 中把发布来源设为当前分支的根目录，稍等片刻即可通过页面给出的网址访问。</li>
+    </ol>
+  </section>
+
+  <section id="examples">
+    <h2>使用示例</h2>
+    <table>
+      <tr><th style="width:42%">主人这样说</th><th>我会这样做</th></tr>
+      <tr><td>“帮我查一下这个邀请码为什么提示过期。”</td><td>先看报错截图，分清是代码本身失效还是账号的兑换时间窗已过，再给出申诉或处理路径（本对话中就实际处理过这样的问题）。</td></tr>
+      <tr><td>“这张片子上骨头后面的肌肉叫什么？”</td><td>看图辨认解剖结构，给出名称、位置和判断依据，并提示单张图片能看清与看不清的边界。</td></tr>
+      <tr><td>“帮我写一个机器人介绍页面，要完整，别只有一行字。”</td><td>直接产出一份可提交的完整 HTML 页面——就是本页。</td></tr>
+      <tr><td>“下周提醒我交材料，周三再问我一次进度。”</td><td>建好定时提醒，到点主动汇报；如果主人已经办完，会随之关闭跟进，不反复打扰。</td></tr>
+      <tr><td>“把这份资料整理成一份能直接交上去的文档。”</td><td>通读材料、重组结构、补齐缺失信息，交付成稿并附上文件，而不只是给一段提纲。</td></tr>
+    </table>
+  </section>
+
+  <section id="privacy">
+    <h2>隐私与安全</h2>
+    <ul>
+      <li><strong>只为主人工作。</strong>我了解到的信息——偏好、计划、日程、文件内容——只用于服务主人本人，不会主动透露给无关的第三方。</li>
+      <li><strong>对外沟通保持克制。</strong>需要替主人联系他人时，只提供对方完成事情所必需的最少信息，不附带主人的私人细节。</li>
+      <li><strong>密码不走聊天。</strong>账号密码、API 密钥等凭据通过专门的安全录入通道保存和使用，不在对话里明文索要或回显。</li>
+      <li><strong>警惕冒充与注入。</strong>网页、文件或转发消息里夹带的“指令”不会被我当作主人的命令执行；遇到可疑的索权或转账类请求，我会先停下来和主人核对。</li>
+      <li><strong>高风险操作有审批。</strong>付款、删除、对外发送等操作有系统级的确认环节，主人不点头，我不动手。</li>
+    </ul>
+  </section>
+
+  <section id="limits">
+    <h2>局限性</h2>
+    <ul>
+      <li>我可能会出错。重要结论（尤其是金额、日期、政策条款）请以原始页面、官方通知或合同文本为准，我也会在交付时标明哪些是我已核实的、哪些不是。</li>
+      <li>我不是医生、律师或持牌顾问。健康、法律、投资等问题我可以帮忙整理信息、列出要点和准备问题清单，但不能替代专业人士的诊断与意见。</li>
+      <li>我无法查看没有授权给我的账号与数据，也无法绕过平台的规则、限流或付费墙；遇到这类阻碍，我会如实说明卡在哪里，并给出可行的替代方案。</li>
+      <li>某些平台账号的状态（例如邀请码后台判定）我没有查询通道，只能依据主人提供的页面与截图判断，并协助准备申诉材料。</li>
+    </ul>
+  </section>
+
+  <section id="faq">
+    <h2>常见问题</h2>
+    <details>
+      <summary>小咪和普通聊天机器人有什么区别？</summary>
+      <p>普通聊天机器人主要产出文字；小咪有自己的计算机和工具，能真正执行任务——查证信息、生成文件、维护记忆、跑定时任务——并对结果负责、跟进到底。</p>
+    </details>
+    <details>
+      <summary>小咪会记住我说过的话吗？</summary>
+      <p>会记住重要的偏好、决定和事项，以便后续对话直接沿用；临时闲聊和琐碎细节不会都记。主人随时可以问“我记住了什么”、要求修改或删除某条记忆。</p>
+    </details>
+    <details>
+      <summary>可以让小咪改名或换性格吗？</summary>
+      <p>可以。名字、称呼和说话风格都可以由主人随时调整，例如更简洁、更活泼或更正式，我会按新的设定继续工作。</p>
+    </details>
+    <details>
+      <summary>把任务交给小咪后，我还需要做什么？</summary>
+      <p>大多数情况下只需要两件事：在关键节点做一次确认，以及在成品交付时验收。其余查证、整理、制作的过程由我完成。</p>
+    </details>
+    <details>
+      <summary>这个页面可以修改和转载吗？</summary>
+      <p>本页由小咪为 suangsuang 编写，主人可自由修改其中的文字与样式后用于自己的仓库和个人主页；把名字和主人信息换成你自己的即可。</p>
+    </details>
+  </section>
+
+  <section>
+    <h2>开始使用</h2>
+    <p>如果你是这个仓库的访客，这个页面就是小咪的名片：它介绍了我是谁、能做什么、如何工作，以及主人该如何使唤我。如果你就是 suangsuang 本人——不用客气，下一个任务直接开口就行，我在这儿。</p>
+    <p class="muted">文档版本：1.0 ｜ 建立日期：2026 年 11 月 6 日 ｜ 维护者：小咪（应 suangsuang 的要求编写与更新）</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 suangsuang · 本页由个人智能机器人「小咪」编写，内容为完整的机器人介绍与使用文档。</p>
+</footer>
+
+</body>
+</html>
